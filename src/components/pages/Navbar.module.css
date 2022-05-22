@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&family=Bebas+Neue&family=Creepster&family=Rubik+Mono+One&display=swap");
+
+body {
+  overflow-x: hidden;
+  font-family: Sans-Serif;
+  margin: 0;
+}
+.newButton {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+.parent {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  text-align: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+.mainText {
+  font-family: "Acme", sans-serif;
+  letter-spacing: 4px;
+  margin: 100px;
+  text-align: center;
+  z-index: 2;
+  position: relative;
+  color: rgb(247, 247, 247);
+}
+.menuContainer {
+  background-color: #593F62;
+  font-family: "Acme", sans-serif;
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: black;
+  padding: 20px;
+  z-index: 2;
+  -webkit-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+.menuLogo {
+  line-height: 0;
+  margin: 0 20px;
+}
+
+.menuLogo img {
+  max-height: 70px;
+  max-width: 100px;
+  flex-shrink: 0;
+}
+
+.menuContainer a {
+  text-decoration: none;
+  color: #FBFAF8;
+  transition: color 0.3s ease;
+}
+
+.menuContainer a:hover {
+  color: #FBFAF8;
+  transform: scale(1.1);
+  transition: all easy-in-out .3s
+}
+
+.menuContainer input {
+  display: block;
+  width: 35px;
+  height: 25px;
+  margin: 0;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  -webkit-touch-callout: none;
+}
+
+/* Burger menu */
+.menuContainer span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  border-radius: 3px;
+  z-index: 2;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+
+.menuContainer span:first-child {
+  transform-origin: 0% 0%;
+}
+
+.menuContainer span:nth-child(3) {
+  transform-origin: 0% 100%;
+}
+
+.menuContainer input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(3px, -1px);
+  background: #FBFAF8;
+}
+
+.menuContainer input:checked ~ span:nth-child(4) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+.menuContainer input:checked ~ span:nth-child(3) {
+  transform: rotate(-45deg) translate(-5px, 11px);
+}
+
+.menuEsquerdo li a {
+  color: #0A122A;
+}
+.menu ul {
+  list-style: none;
+}
+
+.menu li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/* mobile styles */
+@media only screen and (max-width: 767px) {
+  .menuContainer {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .menuLogo {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .menuLogo img {
+    max-height: 30px;
+  }
+
+  .menu {
+    position: absolute;
+    box-sizing: border-box;
+    width: 300px;
+    right: -300px;
+    top: 0;
+    margin: -20px;
+    padding: 75px 50px 50px;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+    transform-origin: 0% 0%;
+    transform: translateX(0%);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+
+  .menuContainer input:checked ~ .menu {
+    transform: translateX(-100%);
+  }
+}
+
+/* desktop styles */
+@media only screen and (min-width: 768px) {
+  .menuContainer {
+    width: 100%;
+  }
+
+  .menuContainer a {
+    color: #0A122A;
+  }
+
+  .menuContainer input {
+    display: none;
+  }
+
+  /* Burger menu */
+  .menuContainer span {
+    display: none;
+  }
+
+  .menu {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .menu ul {
+    display: flex;
+    padding: 0;
+  }
+
+  .menu li {
+    padding: 0 20px;
+  }
+}
+/** For mobile devices **/
+@media (max-width: 767px) {
+  .customShape svg {
+    width: calc(147% + 1.3px);
+    height: 210px;
+  }
+}

@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&family=Bebas+Neue&family=Creepster&family=Rubik+Mono+One&display=swap");
+
+.section {
+  background-color: #7B6D8D;
+  height: 550px;
+  display: flex;
+  justify-content: flex-end;
+  /* border-bottom: 1px solid #000;
+  border-bottom-width: unset; */
+}
+
+.section img {
+  margin-top: 25px;
+  margin-right: 200px;
+}
+.section img:hover {
+  display: flex;
+  flex-shrink: 0;
+  transition: color 0.3s ease;
+  transform: scale(1.1);
+  -webkit-touch-callout: none;
+}
+
+.title {
+  font-family: "Acme", sans-serif;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: #ffffff;
+}
+.title text {
+  margin: 20px;
+  width: 1000px;
+}
+
+.box {
+  color: #133C55;
+  font-family: "Acme", sans-serif;
+  background-color: white;
+  padding: 20px;
+  text-align: justify;
+  flex-direction: row;
+  display: flex;
+ 
+}
+.box .button{
+    align-items: flex-end;
+    display: flex;
+}
+
+.box img {
+  border-radius: 50%;
+}
+.box img:hover {
+  display: flex;
+  flex-shrink: 0;
+  transition: color 0.3s ease;
+  transform: scale(1.1);
+  -webkit-touch-callout: none;
+}
+.box text {
+  margin: 20px;
+  display: flex;
+  align-items: center;
+}
+.box2{
+    color: #133C55;
+    font-family: "Acme", sans-serif;
+    background-color: white;
+    padding: 20px;
+    text-align: justify;
+    flex-direction: row;
+    display: flex;
+    border-bottom: 1px solid black;
+}
+.box2 .button{
+    align-items: flex-end;
+    display: flex;
+}
+
+.box2 img {
+  border-radius: 50%;
+}
+.box2 img:hover {
+  display: flex;
+  flex-shrink: 0;
+  transition: color 0.3s ease;
+  transform: scale(1.1);
+  -webkit-touch-callout: none;
+}
+.box2 text {
+  margin: 20px;
+  display: flex;
+  align-items: center;
+}

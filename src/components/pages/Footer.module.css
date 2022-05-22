@@ -1,0 +1,11 @@
+
+.footer {
+  background-color: #593F62;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #0A122A;
+  font-family: "Acme", sans-serif;
+  letter-spacing: 4px;
+} 

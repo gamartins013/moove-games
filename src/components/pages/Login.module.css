@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&family=Bebas+Neue&family=Creepster&family=Rubik+Mono+One&display=swap");
+
+
+.form {
+  font-family: "Acme", sans-serif;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  margin: 100px;
+}
+.formTitle {
+  font-size: 20px;
+  margin: 15px;
+  letter-spacing: 4px;
+}
+button {
+  margin: 20px;
+  padding: 10px;
+  width: 150px;
+  border-radius: 15px;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: rgb(255, 255, 255);
+  transition: all 0.3s;
+  background-color: #090444;
+  color: white;
+  border: none;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+button:active {
+  background-color: #0a0a0c;
+}
+
+input.login {
+  background-image: url(/public/assets/img/user-solid.svg);
+  background-repeat: no-repeat;
+  background-position: 7px;
+  background-size: 20px;
+}
+input.senha {
+  background-image: url(/public/assets/img/key-solid.svg);
+  background-repeat: no-repeat;
+  background-position: 7px;
+  background-size: 20px;
+}
+input {
+  padding: 25px 35px;
+  width: 400px;
+  height: 20px;
+  border-radius: 15px;
+  margin: 5px;
+  text-decoration: none;
+  outline: none;
+}
